@@ -65,7 +65,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-autoload-dump": [
-            "@php -r \"if(PHP_OS_FAMILY === 'Windows') shell_exec('del /f /s /q runtime\\container && rmdir runtime\\container 2>nul'); else shell_exec('rm -rf runtime/container');\" "
+            
         ],
         "analyse": "@php vendor/bin/phpstan analyse --memory-limit 512M -l 0 -c phpstan.neon ./app ./config",
         "cs-fix": "@php vendor/bin/php-cs-fixer fix $1",
