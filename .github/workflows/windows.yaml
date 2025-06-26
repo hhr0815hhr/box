@@ -1,6 +1,12 @@
 name: Windows build
 
 on:
+  workflow_dispatch: # 允许手动从 GitHub UI 触发
+    inputs:
+      name:
+        description: 'Your name'
+        required: true
+        default: 'World'
   pull_request:
   push:
     tags:
